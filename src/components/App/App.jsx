@@ -8,7 +8,9 @@ import { Container, PageTitle, ContactsTitle } from './App.styled';
 export const App = function () {
   const savedContacts = localStorage.getItem('contacts');
   const parsedContacts = JSON.parse(savedContacts);
-  const [contacts, setContacts] = useState([...parsedContacts] ?? []);
+  const [contacts, setContacts] = useState(
+    parsedContacts ? [...parsedContacts] : []
+  );
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
