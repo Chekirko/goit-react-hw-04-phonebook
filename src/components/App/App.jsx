@@ -47,17 +47,14 @@ export const App = function () {
   return (
     <Container>
       <PageTitle>Phonebook</PageTitle>
-      <ContactForm
-        contacts={contacts}
-        changeState={handleAddContact}
-      ></ContactForm>
+      <ContactForm contacts={contacts} changeState={handleAddContact} />
       <ContactsTitle>Contacts</ContactsTitle>
-      <Filter filter={filter} onChange={handleFilter}></Filter>
+      <Filter filter={filter} onChange={handleFilter} />
 
       <ContactList
         contacts={visibleContacts}
         onBtnDelete={handleDeleteContact}
-      ></ContactList>
+      />
     </Container>
   );
 };
